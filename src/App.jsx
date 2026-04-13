@@ -97,7 +97,7 @@ const App = () => {
     <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100">
       {/* Шапка */}
       <header className="bg-slate-900 text-white pt-24 pb-20 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="relative">
             <div className="w-48 h-60 md:w-56 md:h-72 rounded-3xl overflow-hidden border-4 border-slate-800 shadow-2xl bg-slate-800">
               {!imgError ? (
@@ -150,10 +150,10 @@ const App = () => {
       </header>
 
       {/* Контент */}
-      <main className="max-w-5xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <main className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12">
         
         {/* Левая колонка */}
-        <div className="lg:col-span-2 space-y-16">
+        <div className="lg:col-span-3 space-y-16">
           <section>
             <SectionTitle title="Обо мне" icon={IconUser} />
             <p className="text-lg text-slate-600 leading-relaxed">
