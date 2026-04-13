@@ -193,17 +193,27 @@ const App = () => {
               {RESUME_DATA.projects.map((project) => (
                 <div key={project.id} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition-all group flex flex-col h-full">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-bold group-hover:text-blue-600 transition-colors">{project.title}</h3>
+                    <h3 className="text-lg font-bold group-hover:text-blue-600 transition-colors">
+                      {project.title}
+                    </h3>
                     {project.githubUrl && (
                       <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all"
-                        title="Посмотреть код"
-                      >
-                        <IconGithub size={22} />
-                      </a>
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 p-1.5 px-3 group/link rounded-full transition-all duration-300 -mr-2 -mt-1 hover:bg-blue-50"
+                      title="Посмотреть код на GitHub"
+                    >
+                      {/* 📝 НАДПИСЬ-ПРИЗЫВ (CTA) */}
+                      <span className="text-[11px] font-semibold text-slate-400 opacity-100 sm:opacity-0 group-hover:opacity-100 group-hover/link:text-blue-600 transition-all duration-300">
+                        Посмотреть код
+                     </span>
+                      {/* 🧩 ИКОНКА (Её я сделал чуть больше) */}
+                      <IconGithub 
+                        size={22} 
+                        className="text-slate-300 group-hover:text-blue-600 group-hover/link:text-blue-600 group-hover/link:scale-110 transition-all duration-300" 
+                      />
+                    </a>
                     )}
                   </div>
                   <p className="text-sm text-slate-600 mb-6 leading-relaxed flex-grow">{project.description}</p>
